@@ -1,5 +1,6 @@
 void main() {
     runTask1();
+    runTask2();
 }
 
 private static void runTask1() {
@@ -13,5 +14,17 @@ private static void runTask1() {
     IO.println("\n[Additional:] Check for strictly today's date:");
     IO.println("Input:  \"" + validEmail + "\"");
     IO.println("Output: " + Task1.isValidEmail(validEmail));
+    IO.println();
+}
+
+private static void runTask2() {
+    IO.println("--- Task 2 ---");
+    String input = "Contact us at +1 (123) 456-7890 or 1-777-123-4567";
+    List<String> numbers = Task2.extractPhoneNumbers(input);
+    String formattedOutput = numbers.stream()
+            .map(num -> "\"" + num + "\"")
+            .collect(Collectors.joining(", "));
+    IO.println("Input:  \"" + input + "\"");
+    IO.println("Output: " + formattedOutput);
     IO.println();
 }
