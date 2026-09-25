@@ -1,6 +1,8 @@
 void main() {
     runTask1();
     runTask2();
+    runTask3();
+    runTask4();
 }
 
 private static void runTask1() {
@@ -26,5 +28,25 @@ private static void runTask2() {
             .collect(Collectors.joining(", "));
     IO.println("Input:  \"" + input + "\"");
     IO.println("Output: " + formattedOutput);
+    IO.println();
+}
+
+private static void runTask3() {
+    IO.println("--- Task 3 ---");
+    String json = "{\"key1\": 11, \"key2\": 'asd', \"key3\": 342}";
+    String keyToExtract = "key3";
+    String extractedValue = Task3.extractJsonValue(json, keyToExtract);
+    IO.println("Input JSON: " + json);
+    IO.println("Key to extract: \"" + keyToExtract + "\"");
+    IO.println("Output: " + extractedValue);
+    IO.println();
+}
+
+private static void runTask4() {
+    IO.println("--- Task 4 ---");
+    String input = "ignore me [extract:me] ignore me!";
+    String extractedValue = Task4.extractFromBrackets(input);
+    IO.println("Input:  \"" + input + "\"");
+    IO.println("Output: \"" + extractedValue + "\"");
     IO.println();
 }
