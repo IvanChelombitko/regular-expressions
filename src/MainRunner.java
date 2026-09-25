@@ -2,7 +2,6 @@ void main() {
     runTask1();
     runTask2();
     runTask3();
-    runTask4();
 }
 
 private static void runTask1() {
@@ -39,14 +38,5 @@ private static void runTask3() {
     IO.println("Input JSON: " + json);
     IO.println("Key to extract: \"" + keyToExtract + "\"");
     IO.println("Output: " + extractedValue);
-    IO.println();
-}
-
-private static void runTask4() {
-    IO.println("--- Task 4 ---");
-    String input = "ignore me [extract:me] ignore me!";
-    String extractedValue = Task4.extractFromBrackets(input);
-    IO.println("Input:  \"" + input + "\"");
-    IO.println("Output: \"" + extractedValue + "\"");
     IO.println();
 }
