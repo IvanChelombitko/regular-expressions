@@ -3,6 +3,7 @@ void main() {
     runTask2();
     runTask3();
     runTask4();
+    runTask5();
 }
 
 private static void runTask1() {
@@ -48,5 +49,14 @@ private static void runTask4() {
     String extractedValue = Task4.extractFromBrackets(input);
     IO.println("Input:  \"" + input + "\"");
     IO.println("Output: \"" + extractedValue + "\"");
+    IO.println();
+}
+
+private static void runTask5() {
+    IO.println("--- Task 5 ---");
+    String input = "qqqqqqqweeeeerrtyyyyyyUUUUuuiTT";
+    String output = Task5.groupRepeatingCharacters(input);
+    IO.println("Input:  \"" + input + "\"");
+    IO.println("Output: \"" + output + "\"");
     IO.println();
 }
